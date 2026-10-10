@@ -76,9 +76,9 @@ def analyze_error_with_ai(code: str, traceback_text: str) -> List[int]:
         raise RuntimeError("AIPIPE_TOKEN environment variable is missing.")
 
     client = OpenAI(
-        api_key=token,
-        base_url="https://aipipe.org/openai/v1",
-    )
+    api_key=token,
+    base_url="https://aipipe.org/openrouter/v1"
+)
 
     prompt = f"""
 Identify the 1-based line numbers in the submitted Python code
