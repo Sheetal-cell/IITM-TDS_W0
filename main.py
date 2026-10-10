@@ -10,6 +10,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 from openai import OpenAI
 
+
 app = FastAPI(title="Code Interpreter with AI Error Analysis")
 
 app.add_middleware(
